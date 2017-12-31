@@ -1,1 +1,10 @@
-﻿LINK : fatal error LNK1168: cannot open D:\Data\Git\hash\hash\Debug\hash.exe for writing
+﻿  main.cpp
+d:\data\git\hash\hash\hash_function.h(47): warning C4244: 'return': conversion from 'uint64_t' to '::size_t', possible loss of data
+d:\data\git\hash\hash\hash_function.h(71): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_function.h(79): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_function.h(89): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_table.h(72): warning C4244: '=': conversion from 'double' to '::size_t', possible loss of data
+d:\data\git\hash\hash\hash_table.h(107): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_table.h(132): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_table.h(167): warning C4018: '<': signed/unsigned mismatch
+  hash.vcxproj -> D:\Data\Git\hash\hash\Debug\hash.exe

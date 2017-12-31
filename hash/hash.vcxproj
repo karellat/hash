@@ -111,11 +111,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="hash_table.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cuckoo_hashing.h" />
     <ClInclude Include="hash_function.h" />
     <ClInclude Include="hash_table.h" />
   </ItemGroup>
