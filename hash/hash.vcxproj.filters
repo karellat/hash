@@ -26,5 +26,8 @@
     <ClInclude Include="hash_table.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="randomGen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,6 +5,7 @@
 #include <cmath>
 #include <bitset>
 #include <iostream>
+#include "randomGen.h"
 
 using bits = std::bitset<16>;
 
@@ -46,14 +47,18 @@ public:
 		//TODO: make bit mask
 		return (size_t) ((a*x) % U) / (U/m);		
 	}
-	//TODO: Celo číselné dělení? a nemůže se stát overflow??
 	
 	virtual void make_random() override
 	{
-		//TODO: Implement
+		uint64_t new_a = rng_next_u64();
+		while(new_a % 2 != 1)
+			new_a = rng_next_u64();
+		a = new_a;
 	}
 
-	multiply_shift(const uint64_t U, const std::size_t m, const uint64_t a) : a(a),U(U),m(m) {}
+	multiply_shift(const uint64_t U, const std::size_t m, const uint64_t a) : a(a),U(U),m(m)
+	{
+	}
 	uint64_t a; 
 	size_t m;
 	uint64_t U; 
@@ -63,17 +68,16 @@ class tabular_fnc : public hash_function
 {
 public: 
 
-	tabular_fnc(const size_t block_length) : block_length(block_length),block_count(64/block_length)
+	tabular_fnc(const size_t block_length, const size_t m) : block_length(block_length), block_count(64 / block_length), table_size(m)
 	{
 		assert(block_length > 0 && block_length < 64);
+		//předpokládá m mocninu dvojky 
+		output_max = m - 1;
 		block_max = 1 << block_length;
 		block_max--;
-
 		tab = new size_t*[block_count];
-		for (int i = 0; i < block_count; ++i)
-			tab[i] = new size_t[block_max];
-		
-		//TODO: change to random values
+		make_random();
+	
 	}
 
 	~tabular_fnc()
@@ -99,11 +103,21 @@ public:
 		return index;
 	}
 
-	virtual void make_random() override
+	void make_random() override
 	{
-		//TODO: Implement
+		for (int i = 0; i < block_count; ++i)
+		{
+			tab[i] = new size_t[block_max + 1];
+			for (int j = 0; j < block_max + 1; ++j)
+			{
+				//Mask number to wanted lenght
+				tab[i][j] = (size_t)rng_next_u64() & output_max;
+			}
+		}
 	}
 
+	size_t output_max;
+	size_t table_size;
 	size_t block_max; 
 	size_t block_length;
 	size_t block_count;

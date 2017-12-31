@@ -1,10 +1,14 @@
 ﻿  main.cpp
-d:\data\git\hash\hash\hash_function.h(47): warning C4244: 'return': conversion from 'uint64_t' to '::size_t', possible loss of data
-d:\data\git\hash\hash\hash_function.h(71): warning C4018: '<': signed/unsigned mismatch
-d:\data\git\hash\hash\hash_function.h(79): warning C4018: '<': signed/unsigned mismatch
-d:\data\git\hash\hash\hash_function.h(89): warning C4018: '<': signed/unsigned mismatch
-d:\data\git\hash\hash\hash_table.h(72): warning C4244: '=': conversion from 'double' to '::size_t', possible loss of data
-d:\data\git\hash\hash\hash_table.h(107): warning C4018: '<': signed/unsigned mismatch
-d:\data\git\hash\hash\hash_table.h(132): warning C4018: '<': signed/unsigned mismatch
-d:\data\git\hash\hash\hash_table.h(167): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\randomgen.h(45): warning C4244: 'return': conversion from 'uint64_t' to 'uint32_t', possible loss of data
+d:\data\git\hash\hash\hash_function.h(48): warning C4244: 'return': conversion from 'uint64_t' to '::size_t', possible loss of data
+d:\data\git\hash\hash\hash_function.h(85): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_function.h(95): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_function.h(108): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_function.h(111): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_table.h(113): warning C4244: '=': conversion from 'double' to '::size_t', possible loss of data
+d:\data\git\hash\hash\hash_table.h(151): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_table.h(176): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\hash_table.h(221): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\main.cpp(92): warning C4018: '<': signed/unsigned mismatch
+d:\data\git\hash\hash\main.cpp(101): warning C4018: '<': signed/unsigned mismatch
   hash.vcxproj -> D:\Data\Git\hash\hash\Debug\hash.exe
